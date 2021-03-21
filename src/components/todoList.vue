@@ -1,6 +1,6 @@
 <template>
     <p>{{ greeting }}</p>
-    <ol id=todoList>
+    <ol id="todoList">
         <li v-for="todo in todos">
         {{ todo.text }}
         </li>
