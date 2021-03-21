@@ -16,9 +16,9 @@ export default {
     data() {
         return {
             todos: [
-                { id: 0, text: 'Vegetables' },
-                { id: 1, text: 'Cheese' },
-                { id: 2, text: 'Whatever else humans are supposed to eat' }
+                { id: 0, text: 'Take car to mechanic' },
+                { id: 1, text: 'Buy groceries' },
+                { id: 2, text: 'Take pet out for a walk' }
             ]
         }
     }
