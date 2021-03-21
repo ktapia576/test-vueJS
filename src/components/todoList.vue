@@ -6,7 +6,7 @@
             v-bind:class="{ list: todo.complete}"
             v-for="todo in todos"
         >
-        {{ todo.text }} -- {{ todo.complete }}
+        {{ todo.text }}
         </li>
     </ul>
 </template>
@@ -36,6 +36,7 @@ export default {
     width: 50%;
     border: 3px solid green;
     padding: 30px;
+    text-align: left;
 }
 
 .list {
