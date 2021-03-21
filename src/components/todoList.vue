@@ -1,10 +1,14 @@
 <template>
     <p>{{ greeting }}</p>
-    <ol id="todoList">
-        <li v-for="todo in todos">
-        {{ todo.text }}
+    <ul id="todoList">
+        <li 
+            @click="todo.complete = !todo.complete"
+            v-bind:class="{ list: todo.complete}"
+            v-for="todo in todos"
+        >
+        {{ todo.text }} -- {{ todo.complete }}
         </li>
-    </ol>
+    </ul>
 </template>
 
 <script>
@@ -16,9 +20,9 @@ export default {
     data() {
         return {
             todos: [
-                { id: 0, text: 'Take car to mechanic' },
-                { id: 1, text: 'Buy groceries' },
-                { id: 2, text: 'Take pet out for a walk' }
+                { id: 0, text: 'Take car to mechanic', complete: false},
+                { id: 1, text: 'Buy groceries', complete: false },
+                { id: 2, text: 'Take pet out for a walk', complete: false }
             ]
         }
     }
@@ -32,6 +36,10 @@ export default {
     width: 50%;
     border: 3px solid green;
     padding: 30px;
+}
+
+.list {
+    text-decoration: line-through
 }
 
 a {
